@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QSM-v0-Css">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PinTableViewCell" id="QSM-v0-Css">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QSM-v0-Css" id="SKI-ON-Och">
@@ -90,22 +90,11 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hoR-bl-QLh">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p01-Ib-cbZ">
-                                <rect key="frame" x="82" y="743" width="250" height="40"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="p01-Ib-cbZ" firstAttribute="leading" secondItem="SGa-nK-0gQ" secondAttribute="leading" constant="82" id="6ou-sL-4C8"/>
                             <constraint firstItem="hoR-bl-QLh" firstAttribute="trailing" secondItem="SGa-nK-0gQ" secondAttribute="trailing" id="GsB-Jo-Wwv"/>
                             <constraint firstItem="hoR-bl-QLh" firstAttribute="bottom" secondItem="SGa-nK-0gQ" secondAttribute="bottom" id="Kut-Df-88q"/>
-                            <constraint firstItem="p01-Ib-cbZ" firstAttribute="top" secondItem="SGa-nK-0gQ" secondAttribute="top" constant="655" id="Vje-Lp-dXa"/>
-                            <constraint firstItem="p01-Ib-cbZ" firstAttribute="centerX" secondItem="hoR-bl-QLh" secondAttribute="centerX" id="iCf-ge-YgF"/>
-                            <constraint firstItem="SGa-nK-0gQ" firstAttribute="bottom" secondItem="p01-Ib-cbZ" secondAttribute="bottom" constant="30" id="l9g-cN-8u1"/>
                             <constraint firstItem="hoR-bl-QLh" firstAttribute="top" secondItem="SGa-nK-0gQ" secondAttribute="top" id="ocE-w4-kx7"/>
                             <constraint firstItem="hoR-bl-QLh" firstAttribute="leading" secondItem="SGa-nK-0gQ" secondAttribute="leading" id="ugy-lG-FmM"/>
                         </constraints>
@@ -114,6 +103,9 @@
                     <navigationItem key="navigationItem" title="Map" id="EJf-GT-jK0">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.clockwise" catalog="system" id="67q-Mm-F9M"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="map" destination="hoR-bl-QLh" id="Nq8-xA-K8D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fQ-In-TpQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,21 +138,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="km5-Kh-Aa8">
-                                <rect key="frame" x="159" y="374" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="km5-Kh-Aa8">
+                                <rect key="frame" x="159" y="374" width="96" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeQ-wk-jWq">
-                                <rect key="frame" x="159" y="431" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeQ-wk-jWq">
+                                <rect key="frame" x="159" y="431" width="100" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFx-6c-kY6">
-                                <rect key="frame" x="184" y="520" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFx-6c-kY6">
+                                <rect key="frame" x="186" y="521" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1z-hl-KKr"/>
@@ -168,6 +157,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="km5-Kh-Aa8" firstAttribute="leading" secondItem="yeQ-wk-jWq" secondAttribute="leading" id="7oW-64-R8n"/>
+                            <constraint firstItem="eFx-6c-kY6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="186" id="JFN-pO-slp"/>
+                            <constraint firstItem="km5-Kh-Aa8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="330" id="Oug-8N-6hp"/>
+                            <constraint firstItem="km5-Kh-Aa8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="ZIb-KZ-JT2"/>
+                            <constraint firstItem="eFx-6c-kY6" firstAttribute="top" secondItem="yeQ-wk-jWq" secondAttribute="bottom" constant="56" id="lTx-xf-iAU"/>
+                            <constraint firstItem="km5-Kh-Aa8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pJw-oe-oLT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eFx-6c-kY6" secondAttribute="bottom" constant="311" id="x5K-Sc-IrQ"/>
+                            <constraint firstItem="eFx-6c-kY6" firstAttribute="centerX" secondItem="yeQ-wk-jWq" secondAttribute="centerX" id="z6L-zE-qzH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

@@ -14,6 +14,11 @@ class OTMClient {
         case POST = "POST"
         case PUT = "PUT"
     }
+    
+    struct Auth {
+        static var sessionId = ""
+        static var accountKey = ""
+    }
 
     
     enum Endpoints {
@@ -27,7 +32,7 @@ class OTMClient {
         
         var stringValue: String {
             switch self {
-            case .getStudentList(let params): return Endpoints.base + "/StudentLocation?\(params.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? "")"
+            case .getStudentList(let params): return Endpoints.base + "StudentLocation?\(params.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? "")"
             case .postStudentPin: return Endpoints.base + "StudentLocation/"
             case .putStudentPin(let studentId): return Endpoints.base + "StudentLocation/\(studentId)"
             case .authenticateOrDelete: return Endpoints.base + "session"
@@ -52,6 +57,7 @@ class OTMClient {
             
             let decoder = JSONDecoder()
             do {
+                
                 let responseObject = try decoder.decode(ResponseType.self, from: data)
                 DispatchQueue.main.async {
                     completion(responseObject,nil)
@@ -95,6 +101,16 @@ class OTMClient {
         task.resume()
     }
     
-    
+    class func getStudentLocation(params: String, completion: @escaping ([Pin], Error?) -> Void) {
+        taskForGetRequest(url: Endpoints.getStudentList(params).url, responseType: StudentPinResponse.self , completion: {
+            (response, error) in
+            if let response = response {
+                completion(response.results, nil)
+            }
+            else {
+                completion([], error)
+            }
+        })
+    }
 }
 

@@ -25,6 +25,7 @@
 		496CB5622474615500FBA7B5 /* AuthenticateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB5612474615500FBA7B5 /* AuthenticateRequest.swift */; };
 		496CB564247461F700FBA7B5 /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB563247461F700FBA7B5 /* LogoutResponse.swift */; };
 		496CB566247464C700FBA7B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB565247464C700FBA7B5 /* User.swift */; };
+		4980CF0E247AAD9F00A92B39 /* StudentPinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4980CF0D247AAD9F00A92B39 /* StudentPinResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		496CB5612474615500FBA7B5 /* AuthenticateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateRequest.swift; sourceTree = "<group>"; };
 		496CB563247461F700FBA7B5 /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
 		496CB565247464C700FBA7B5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4980CF0D247AAD9F00A92B39 /* StudentPinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentPinResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,11 +144,12 @@
 			isa = PBXGroup;
 			children = (
 				496CB5572472FC8700FBA7B5 /* Pin.swift */,
+				496CB565247464C700FBA7B5 /* User.swift */,
 				496CB55B247312EA00FBA7B5 /* PostPinResponse.swift */,
 				496CB55D2473135000FBA7B5 /* PutPinResponse.swift */,
 				496CB55F2474608700FBA7B5 /* AuthentitateResponse.swift */,
 				496CB563247461F700FBA7B5 /* LogoutResponse.swift */,
-				496CB565247464C700FBA7B5 /* User.swift */,
+				4980CF0D247AAD9F00A92B39 /* StudentPinResponse.swift */,
 			);
 			path = "OTM Response";
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4980CF0E247AAD9F00A92B39 /* StudentPinResponse.swift in Sources */,
 				496CB55E2473135000FBA7B5 /* PutPinResponse.swift in Sources */,
 				496CB5562472FC0800FBA7B5 /* PinModel.swift in Sources */,
 				496CB53A2472ECA600FBA7B5 /* LoginVC.swift in Sources */,
