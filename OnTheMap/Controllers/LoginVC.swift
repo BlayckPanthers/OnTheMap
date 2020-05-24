@@ -13,6 +13,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        print(OTMClient.Endpoints.getStudentList("&"))
     }
 
     @IBAction func loginAction(_ sender: Any) {

@@ -18,6 +18,13 @@
 		496CB5512472FB5100FBA7B5 /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB5502472FB5100FBA7B5 /* OTMClient.swift */; };
 		496CB5562472FC0800FBA7B5 /* PinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB5552472FC0800FBA7B5 /* PinModel.swift */; };
 		496CB5582472FC8700FBA7B5 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB5572472FC8700FBA7B5 /* Pin.swift */; };
+		496CB55A2473125700FBA7B5 /* PostPinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB5592473125600FBA7B5 /* PostPinRequest.swift */; };
+		496CB55C247312EA00FBA7B5 /* PostPinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB55B247312EA00FBA7B5 /* PostPinResponse.swift */; };
+		496CB55E2473135000FBA7B5 /* PutPinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB55D2473135000FBA7B5 /* PutPinResponse.swift */; };
+		496CB5602474608700FBA7B5 /* AuthentitateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB55F2474608700FBA7B5 /* AuthentitateResponse.swift */; };
+		496CB5622474615500FBA7B5 /* AuthenticateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB5612474615500FBA7B5 /* AuthenticateRequest.swift */; };
+		496CB564247461F700FBA7B5 /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB563247461F700FBA7B5 /* LogoutResponse.swift */; };
+		496CB566247464C700FBA7B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB565247464C700FBA7B5 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		496CB5502472FB5100FBA7B5 /* OTMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
 		496CB5552472FC0800FBA7B5 /* PinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModel.swift; sourceTree = "<group>"; };
 		496CB5572472FC8700FBA7B5 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		496CB5592473125600FBA7B5 /* PostPinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPinRequest.swift; sourceTree = "<group>"; };
+		496CB55B247312EA00FBA7B5 /* PostPinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPinResponse.swift; sourceTree = "<group>"; };
+		496CB55D2473135000FBA7B5 /* PutPinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutPinResponse.swift; sourceTree = "<group>"; };
+		496CB55F2474608700FBA7B5 /* AuthentitateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentitateResponse.swift; sourceTree = "<group>"; };
+		496CB5612474615500FBA7B5 /* AuthenticateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateRequest.swift; sourceTree = "<group>"; };
+		496CB563247461F700FBA7B5 /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
+		496CB565247464C700FBA7B5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +132,8 @@
 		496CB5532472FB8E00FBA7B5 /* OTM Request */ = {
 			isa = PBXGroup;
 			children = (
+				496CB5592473125600FBA7B5 /* PostPinRequest.swift */,
+				496CB5612474615500FBA7B5 /* AuthenticateRequest.swift */,
 			);
 			path = "OTM Request";
 			sourceTree = "<group>";
@@ -126,6 +142,11 @@
 			isa = PBXGroup;
 			children = (
 				496CB5572472FC8700FBA7B5 /* Pin.swift */,
+				496CB55B247312EA00FBA7B5 /* PostPinResponse.swift */,
+				496CB55D2473135000FBA7B5 /* PutPinResponse.swift */,
+				496CB55F2474608700FBA7B5 /* AuthentitateResponse.swift */,
+				496CB563247461F700FBA7B5 /* LogoutResponse.swift */,
+				496CB565247464C700FBA7B5 /* User.swift */,
 			);
 			path = "OTM Response";
 			sourceTree = "<group>";
@@ -201,14 +222,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496CB55E2473135000FBA7B5 /* PutPinResponse.swift in Sources */,
 				496CB5562472FC0800FBA7B5 /* PinModel.swift in Sources */,
 				496CB53A2472ECA600FBA7B5 /* LoginVC.swift in Sources */,
+				496CB55C247312EA00FBA7B5 /* PostPinResponse.swift in Sources */,
+				496CB564247461F700FBA7B5 /* LogoutResponse.swift in Sources */,
+				496CB55A2473125700FBA7B5 /* PostPinRequest.swift in Sources */,
 				496CB5512472FB5100FBA7B5 /* OTMClient.swift in Sources */,
 				496CB5582472FC8700FBA7B5 /* Pin.swift in Sources */,
+				496CB566247464C700FBA7B5 /* User.swift in Sources */,
 				496CB54D2472F0A900FBA7B5 /* MapVC.swift in Sources */,
+				496CB5602474608700FBA7B5 /* AuthentitateResponse.swift in Sources */,
 				496CB5362472ECA600FBA7B5 /* AppDelegate.swift in Sources */,
 				496CB5382472ECA600FBA7B5 /* SceneDelegate.swift in Sources */,
 				496CB54F2472F0DE00FBA7B5 /* ListPinVC.swift in Sources */,
+				496CB5622474615500FBA7B5 /* AuthenticateRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
