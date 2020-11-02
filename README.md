@@ -1,3 +1,3 @@
 # OnTheMap
 
-Application like Maptsr (in progress)
+Application like Mapstr (in progress)
